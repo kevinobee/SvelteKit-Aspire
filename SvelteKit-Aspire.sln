@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvelteKit-Aspire.AppHost", "SvelteKit-Aspire.AppHost\SvelteKit-Aspire.AppHost.csproj", "{188F7F09-CA7B-4707-9AA0-6C78FC69ED72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvelteKit-Aspire.ServiceDefaults", "SvelteKit-Aspire.ServiceDefaults\SvelteKit-Aspire.ServiceDefaults.csproj", "{B67F3324-A3BE-46E9-A6C7-1CDC64701B24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integration.Tests", "Integration.Tests\Integration.Tests.csproj", "{F3A2776E-9974-42B7-8FAB-B1637CA7B639}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireJavaScript.MinimalApi", "AspireJavaScript.MinimalApi\AspireJavaScript.MinimalApi.csproj", "{6451BC9D-E830-4A91-8C39-79EF0392D262}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution folder", "Solution folder", "{11D64DEC-E4F3-4CE1-AF76-4C46ADF4DEDE}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{188F7F09-CA7B-4707-9AA0-6C78FC69ED72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188F7F09-CA7B-4707-9AA0-6C78FC69ED72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188F7F09-CA7B-4707-9AA0-6C78FC69ED72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188F7F09-CA7B-4707-9AA0-6C78FC69ED72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67F3324-A3BE-46E9-A6C7-1CDC64701B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67F3324-A3BE-46E9-A6C7-1CDC64701B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67F3324-A3BE-46E9-A6C7-1CDC64701B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67F3324-A3BE-46E9-A6C7-1CDC64701B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A2776E-9974-42B7-8FAB-B1637CA7B639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A2776E-9974-42B7-8FAB-B1637CA7B639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A2776E-9974-42B7-8FAB-B1637CA7B639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A2776E-9974-42B7-8FAB-B1637CA7B639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6451BC9D-E830-4A91-8C39-79EF0392D262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6451BC9D-E830-4A91-8C39-79EF0392D262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6451BC9D-E830-4A91-8C39-79EF0392D262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6451BC9D-E830-4A91-8C39-79EF0392D262}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {665E7257-4EBB-44D8-BF6E-D5719A5F32B5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,66 @@
+{
+	"resources": {
+		"weatherapi": {
+			"type": "project.v0",
+			"path": "../AspireJavaScript.MinimalApi/AspireJavaScript.MinimalApi.csproj",
+			"env": {
+				"OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+				"OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+				"OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+				"ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true"
+			},
+			"bindings": {
+				"http": {
+					"scheme": "http",
+					"protocol": "tcp",
+					"transport": "http"
+				},
+				"https": {
+					"scheme": "https",
+					"protocol": "tcp",
+					"transport": "http"
+				}
+			}
+		},
+		"vue": {
+			"type": "dockerfile.v0",
+			"path": "../AspireJavaScript.Vue/Dockerfile",
+			"context": "../AspireJavaScript.Vue",
+			"env": {
+				"NODE_ENV": "production",
+				"VITE_WEATHER_API_HTTP": "{weatherapi.bindings.http.url}",
+				"VITE_WEATHER_API_HTTPS": "{weatherapi.bindings.https.url}",
+				"PORT": "{vue.bindings.http.targetPort}"
+			},
+			"bindings": {
+				"http": {
+					"scheme": "http",
+					"protocol": "tcp",
+					"transport": "http",
+					"targetPort": 8002,
+					"external": true
+				}
+			}
+		},
+		"svelte": {
+			"type": "dockerfile.v0",
+			"path": "../SvelteKit-Aspire.SvelteFrontend/Dockerfile",
+			"context": "../SvelteKit-Aspire.SvelteFrontend",
+			"env": {
+				"NODE_ENV": "production",
+				"VITE_WEATHER_API_HTTP": "{weatherapi.bindings.http.url}",
+				"VITE_WEATHER_API_HTTPS": "{weatherapi.bindings.https.url}",
+				"PORT": "{svelte.bindings.http.targetPort}"
+			},
+			"bindings": {
+				"http": {
+					"scheme": "http",
+					"protocol": "tcp",
+					"transport": "http",
+					"targetPort": 5173,
+					"external": true
+				}
+			}
+		}
+	}
+}

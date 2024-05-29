@@ -28,11 +28,11 @@
 </script>
 
 {#if loading}
-	<div>Loading...</div>
+	<progress></progress>
 {:else if error}
-	<pre>
-  {JSON.stringify(error, null, 2)}
- </pre>
+	<div class="error">
+		We are unable to fetch the latest weather forecast. Please try again later.
+	</div>
 {:else}
 	<table>
 		<thead>
@@ -57,6 +57,22 @@
 {/if}
 
 <style>
+	:root {
+		--error: #FF3E00; 
+	}
+
+	progress {
+		margin-inline: 1rem;
+		margin-block: 2rem;
+		width: 250px;
+		height: 36px;
+	}
+
+	.error {
+		margin-inline: 1rem;
+		margin-block: 2rem;
+		color: var(--error);
+	}
 	table {
 		border: none;
 		border-collapse: collapse;

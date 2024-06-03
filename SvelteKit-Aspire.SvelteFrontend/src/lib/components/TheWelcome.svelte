@@ -10,9 +10,7 @@
 
 	type Forecasts = WeatherForecast[];
 
-	let name = 'TheWelcome';
 	let forecasts: Forecasts = [];
-	let loading: boolean = true;
 	let error: unknown = null;
 
 	onMount(async () => {
@@ -21,15 +19,11 @@
 			forecasts = await res.json();
 		} catch (err) {
 			error = err;
-		} finally {
-			loading = false;
 		}
 	});
 </script>
 
-{#if loading}
-	<progress></progress>
-{:else if error}
+{#if error}
 	<div class="error">
 		We are unable to fetch the latest weather forecast. Please try again later.
 	</div>
@@ -58,14 +52,7 @@
 
 <style>
 	:root {
-		--error: #FF3E00; 
-	}
-
-	progress {
-		margin-inline: 1rem;
-		margin-block: 2rem;
-		width: 250px;
-		height: 36px;
+		--error: #ff3e00;
 	}
 
 	.error {

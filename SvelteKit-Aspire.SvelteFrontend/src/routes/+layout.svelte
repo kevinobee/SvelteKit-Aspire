@@ -2,7 +2,7 @@
 	import '$lib/assets/main.css';
 </script>
 
-<div>
+<div id="app">
 	<slot />
 </div>
 

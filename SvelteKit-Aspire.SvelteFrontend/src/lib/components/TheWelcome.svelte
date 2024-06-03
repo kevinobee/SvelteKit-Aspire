@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	interface WeatherForecast {
 		date: string;
@@ -24,7 +25,7 @@
 </script>
 
 {#if error}
-	<div class="error">
+	<div class="error" in:fade>
 		We are unable to fetch the latest weather forecast. Please try again later.
 	</div>
 {:else}
@@ -39,7 +40,7 @@
 		</thead>
 		<tbody>
 			{#each forecasts as forecast}
-				<tr>
+				<tr in:fade>
 					<td>{forecast.date}</td>
 					<td>{forecast.temperatureC}</td>
 					<td>{forecast.temperatureF}</td>

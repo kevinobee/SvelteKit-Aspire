@@ -7,9 +7,14 @@
 version: 2
 updates:
   - package-ecosystem: 'npm'
-    directory: '/'
+    directory: '/AspireJavaScript.Vue'
     schedule:
       interval: 'weekly'
+
+  - package-ecosystem: 'npm'
+    directory: '/SvelteKit-Aspire.SvelteFrontend'
+    schedule:
+      interval: 'weekly'      
 
   - package-ecosystem: 'github-actions'
     directory: '.github/workflows'

@@ -15,6 +15,11 @@
     "test:integration": "playwright test",
     "test:unit": "vitest"
   },
+  "pnpm": {
+    "overrides": {
+      "cookie@<0.7.0": ">=0.7.0"
+    }
+  },
   "devDependencies": {
     "@playwright/test": "^1.44.1",
     "@sveltejs/adapter-auto": "^3.2.1",

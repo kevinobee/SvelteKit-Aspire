@@ -15,14 +15,8 @@
     "test:integration": "playwright test",
     "test:unit": "vitest"
   },
-  "pnpm": {
     "overrides": {
       "cookie@<0.7.0": ">=0.7.0"
-    },
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "svelte-preprocess"
-    ]
   },
   "devDependencies": {
     "@playwright/test": "^1.44.1",

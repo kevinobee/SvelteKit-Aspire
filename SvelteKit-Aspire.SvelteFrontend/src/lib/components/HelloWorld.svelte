@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let msg: string;
+	interface Props {
+		msg: string;
+	}
+
+	let { msg }: Props = $props();
 </script>
 
 <div class="greetings">

@@ -1,12 +1,24 @@
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+	
+	interface Props {
+		icon?: Snippet;
+		heading?: Snippet;
+		children?: Snippet;
+	}
+
+	let { icon, heading, children }: Props = $props();
+</script>
+
 <div class="item">
 	<i>
-		<slot name="icon"></slot>
+		{@render icon?.()}
 	</i>
 	<div class="details">
 		<h3>
-			<slot name="heading"></slot>
+			{@render heading?.()}
 		</h3>
-		<slot></slot>
+		{@render children?.()}
 	</div>
 </div>
 

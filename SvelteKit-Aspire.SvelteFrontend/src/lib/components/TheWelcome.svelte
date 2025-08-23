@@ -11,8 +11,8 @@
 
 	type Forecasts = WeatherForecast[];
 
-	let forecasts: Forecasts = [];
-	let error: unknown = null;
+	let forecasts: Forecasts = $state([]);
+	let error: unknown = $state(null);
 
 	onMount(async () => {
 		try {

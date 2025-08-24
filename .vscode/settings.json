@@ -2,8 +2,10 @@
 	"cSpell.words": [
 		"ASPNETCORE",
 		"FORWARDEDHEADERS",
+		"Jsons",
 		"OTEL",
 		"OTLP",
+		"Swashbuckle",
 		"weatherapi",
 		"weatherforecast",
 		"Xunit"

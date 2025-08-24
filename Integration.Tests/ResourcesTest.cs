@@ -1,7 +1,6 @@
 using System.Net;
-using Xunit.Abstractions;
 
-namespace Integration.Tests.Tests
+namespace Integration.Tests
 {
     public class ResourcesTest
     {
@@ -11,13 +10,13 @@ namespace Integration.Tests.Tests
         public async Task GetWebResourceRootReturnsOkStatusCode(string resource)
         {
             // Arrange
-            var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.SvelteKit_Aspire_AppHost>();
-            await using var app = await appHost.BuildAsync();
-            await app.StartAsync();
+            var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.SvelteKit_Aspire_AppHost>(TestContext.Current.CancellationToken);
+            await using var app = await appHost.BuildAsync(TestContext.Current.CancellationToken);
+            await app.StartAsync(TestContext.Current.CancellationToken);
 
             // Act
             var httpClient = app.CreateHttpClient(resource);
-            var response = await httpClient.GetAsync("/");
+            var response = await httpClient.GetAsync("/", TestContext.Current.CancellationToken);
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);

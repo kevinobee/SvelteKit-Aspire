@@ -19,7 +19,7 @@
     "cookie@<0.7.0": ">=0.7.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
+    "@playwright/test": "^1.56.1",
     "@sveltejs/adapter-auto": "^3.3.1",
     "@sveltejs/kit": "^2.36.1",
     "@sveltejs/vite-plugin-svelte": "^6.1.3",

@@ -62,7 +62,7 @@ jobs:
 
     - name: Publish Test Results
       if: (success() || steps.test.conclusion == 'failure') && matrix.os == 'ubuntu-latest'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: TestResults
         path: ./TestResults        
